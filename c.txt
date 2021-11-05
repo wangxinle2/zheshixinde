@@ -1,0 +1,28 @@
+qishijinbi=5000#起始金币为5000
+import random#导入
+suiji=random.randint(0,150)#随机生成0-150的数字
+print("suiji")#打印出来随机生成的数字
+print(type(suiji))#查看数据类型的方法
+cishu=1#第一遍
+while cishu<15:#小于十五次循环为真
+    shuru=input("请输入你猜的数字")#打印输入的数字
+    shuru=int(shuru)#输入的数字
+    if shuru>suiji:#如果shuru大于suiji
+        qishijinbi-=500 #qishijinbi-500
+        print("猜的数字大了")#打印“猜的数字大了”
+        print("金币剩余",qishijinbi)  #打印“金币剩余”（qishijinbi-500）
+    elif shuru<suiji:
+        qishijinbi-=500
+        print("猜的数字小了")
+        print("金币剩余",qishijinbi)        
+    else :
+        print("恭喜你猜中了，本次猜中的数字为:")
+        qishijinbi+=3000
+        print("金币变为：",qishijinbi) 
+    if qishijinbi==0:#qishijinbi等于0时
+        break#退出程序
+        print("余额不足")
+    cishu=cishu+1#while循环第二遍开始
+    
+    
+
